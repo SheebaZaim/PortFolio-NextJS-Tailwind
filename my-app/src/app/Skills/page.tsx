@@ -1,30 +1,26 @@
-
-
 import React from 'react';
-import { SKILLS } from '@/constant'; 
-import{SkillItemProps} from '@/constant';
-
-const SkillItem = ({ title, description }: SkillItemProps) => {
-    return (
-        <li className="relative flex w-full flex-1 flex-col items-center text-center bg-[#CCFFFF] shadow-[0_3px_10px_rgba(0,0,0,0.3)] rounded-2xl p-10 hover:bg-blue-500 group transition duration-300">
-            <div>
-                <h3 className="font-bold text-lg lg:text-xl mt-6 capitalize group-hover:text-white">{title}</h3>
-                <p className="text-gray-700 mt-4 group-hover:text-white">{description}</p>
-            </div>
-        </li>
-    );
-};
+import Link from 'next/link';
+import { SKILLS } from '@/constant';
 
 const Skills = () => {
     return (
-        <section className="max-container padding-containner gap-20 py-10 px-8 md:gap-28 lg:py-20 flex flex-col items-center ">
-            {/* Title */}
-            <div className="text-center font-bold text-xl uppercase tracking-[1rem] text-blue-600 pb-10">
-                SKILLS
+        <section className="max-container padding-container py-16 px-6 md:py-24 flex flex-col items-center bg-white">
+            <div className="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-200 rounded-full px-4 py-1.5 mb-4">
+                <span className="text-indigo-600 text-sm font-semibold uppercase tracking-widest">Skills & Expertise</span>
             </div>
-            <ul className="mt-10 grid gap-10 md:grid-cols-2 lg:grid-cols-4 md:gap-12">
-                {SKILLS.map((skill, index) => (
-                    <SkillItem key={index} title={skill.title} description={skill.description} />
+            <h2 className="text-3xl font-extrabold text-gray-800 mb-2 text-center">What I Bring to the Table</h2>
+            <p className="text-gray-500 text-center max-w-lg mb-14">A unique blend of educational leadership and modern AI-driven technology skills. Click any skill to explore more.</p>
+
+            <ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 w-full">
+                {SKILLS.map((skill) => (
+                    <Link key={skill.slug} href={`/Skills/${skill.slug}`}>
+                        <li className="relative flex w-full flex-col items-center text-center bg-white shadow-md rounded-3xl p-8 hover:bg-gradient-to-br hover:from-indigo-600 hover:to-violet-600 group transition-all duration-300 border border-gray-100 hover:border-transparent hover:shadow-xl cursor-pointer h-full">
+                            <div className="text-4xl mb-4">{skill.emoji}</div>
+                            <h3 className="font-bold text-lg lg:text-xl capitalize group-hover:text-white text-gray-800">{skill.title}</h3>
+                            <p className="text-gray-500 mt-3 text-sm leading-relaxed group-hover:text-indigo-100">{skill.description}</p>
+                            <span className="mt-5 text-xs font-semibold text-indigo-500 group-hover:text-white uppercase tracking-widest">View Details →</span>
+                        </li>
+                    </Link>
                 ))}
             </ul>
         </section>
