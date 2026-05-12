@@ -35,7 +35,14 @@ const ProjectCard = ({ title, description, vercelLink, videoUrl, tags }: {
         <div className="bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-shadow duration-300 border border-gray-100">
             {/* Video */}
             <div className="relative bg-gradient-to-br from-indigo-50 to-violet-100 h-52 flex items-center justify-center overflow-hidden">
-                {videoUrl ? (
+                {videoUrl && videoUrl.includes('youtube.com/embed') ? (
+                    <iframe
+                        src={videoUrl}
+                        className="w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    />
+                ) : videoUrl ? (
                     <video
                         src={videoUrl}
                         controls

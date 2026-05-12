@@ -133,7 +133,7 @@ export const PROJECTS: ProjectItemProps[] = [
         title: "Payroll Automation System",
         description: "An agentic automation system that handles end-to-end payroll processing — connecting APIs, calculating salaries, generating reports, and sending automated notifications.",
         vercelLink: "#",
-        videoUrl: "/Images/payrolls.mp4",
+        videoUrl: "https://www.youtube.com/embed/6j4IZSlmIDw",
         tags: ["n8n", "Automation", "API Integration", "Claude AI"],
     },
     {
