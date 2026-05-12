@@ -123,11 +123,11 @@ export type ProjectItemProps = {
 
 export const PROJECTS: ProjectItemProps[] = [
     {
-        title: "Humanoid AI Agent",
-        description: "A fully autonomous AI agent built with Anthropic Claude that reasons, plans, and executes multi-step tasks — including web search, tool use, and educational content generation — without human intervention.",
+        title: "AI Ebook Writer",
+        description: "An AI-powered ebook writing assistant built with Anthropic Claude that generates structured, well-researched ebook content — from outline to full chapters — using agentic workflows and tool use.",
         vercelLink: "#",
         videoUrl: "https://www.youtube.com/embed/Hnme6SGYe8I",
-        tags: ["Anthropic Claude", "AI Agents", "Python", "Tool Use"],
+        tags: ["Anthropic Claude", "AI Agents", "Python", "Content Generation"],
     },
     {
         title: "Payroll Automation System",
@@ -147,6 +147,6 @@ export const PROJECTS: ProjectItemProps[] = [
 
 // SOCIAL LINKS
 export const SOCIAL = [
-    { href: "https://github.com/yourprofile", key: "GitHub", Image: "/Images/github.png" },
+    { href: "https://github.com/SheebaZaim", key: "GitHub", Image: "/Images/github.png" },
     { href: "https://linkedin.com/in/sheebazaim", key: "LinkedIn", Image: "/Images/linkedin-icon.png" },
 ];

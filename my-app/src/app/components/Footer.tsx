@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="flex items-center justify-center gap-4">
 
         <Link
-          href="https://github.com/yourprofile"
+          href="https://github.com/SheebaZaim"
           target="_blank"
           rel="noopener noreferrer"
           className="w-11 h-11 rounded-full bg-white border border-purple-200 flex items-center justify-center hover:bg-indigo-600 hover:border-indigo-600 transition-all duration-200"
