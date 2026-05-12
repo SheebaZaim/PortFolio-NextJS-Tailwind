@@ -126,7 +126,7 @@ export const PROJECTS: ProjectItemProps[] = [
         title: "Humanoid AI Agent",
         description: "A fully autonomous AI agent built with Anthropic Claude that reasons, plans, and executes multi-step tasks — including web search, tool use, and educational content generation — without human intervention.",
         vercelLink: "#",
-        videoUrl: "/Images/Humanoid_AI.mp4",
+        videoUrl: "https://www.youtube.com/embed/Hnme6SGYe8I",
         tags: ["Anthropic Claude", "AI Agents", "Python", "Tool Use"],
     },
     {
@@ -140,7 +140,7 @@ export const PROJECTS: ProjectItemProps[] = [
         title: "Todo App for All",
         description: "A full-stack productivity app built with modern web technologies — featuring task management, priority setting, and real-time updates for educators and teams.",
         vercelLink: "#",
-        videoUrl: "/Images/2026-02-28/todo APP for all.mp4",
+        videoUrl: "https://www.youtube.com/embed/GMsnSXEXntc",
         tags: ["Next.js", "TypeScript", "Tailwind CSS", "Full Stack"],
     },
 ];
